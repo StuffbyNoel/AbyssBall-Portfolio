@@ -51,29 +51,59 @@
             </div>
         </div>
 
-        <!-- Main Media Placeholder (Gameplay Video) -->
-        <div class="w-full max-w-5xl aspect-video bg-[#0a0a0a] border border-[#2a2a2a] rounded-sm relative group overflow-hidden flex items-center justify-center">
-            <!-- Replace this <p> with a <video> or YouTube/Vimeo <iframe> when ready -->
-            <p class="font-bebas text-3xl md:text-4xl text-[#2a2a2a] tracking-widest text-center px-4 group-hover:scale-110 transition-transform duration-700">
-                GAMEPLAY TRAILER / RUN CAPTURE
-            </p>
+        <!-- Main Vertical Mobile Gameplay Video Showcase (Portrait) -->
+        <!-- Rename your video file to 'AbyssBall_Gameplay.mp4' or update the src below to match -->
+        <div class="w-full max-w-5xl flex flex-col items-center">
+            <div class="w-full max-w-[300px] sm:max-w-[340px] aspect-[9/19.5] max-h-[80vh] bg-[#0a0a0a] border border-[#2a2a2a] hover:border-white/40 rounded-2xl relative group overflow-hidden flex items-center justify-center shadow-2xl transition-colors duration-300">
+                <video
+                    id="abyssball-gameplay-video"
+                    src="./Gameplay.Abyssball.mp4"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    controls
+                    class="w-full h-full object-contain bg-black block"
+                ></video>
+
+                <!-- Label Badge -->
+                <span class="absolute top-3 left-3 bg-black/75 border border-white/15 backdrop-blur-sm px-2.5 py-0.5 rounded text-xs font-bebas tracking-widest text-gray-200 pointer-events-none">
+                    MOBILE GAMEPLAY &bull; UNITY
+                </span>
+
+                <!-- Quick Mute / Unmute Toggle -->
+                <button
+                    id="abyssball-mute-btn"
+                    type="button"
+                    aria-label="Unmute Abyss Ball Gameplay audio"
+                    class="absolute top-3 right-3 z-10 flex items-center gap-1.5 bg-black/75 hover:bg-white hover:text-black border border-white/25 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-bebas tracking-widest text-gray-200 transition-colors cursor-pointer active:scale-95"
+                >
+                    <svg id="abyssball-icon-muted" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6"/>
+                    </svg>
+                    <svg id="abyssball-icon-unmuted" class="hidden w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 010 7.07M19.07 4.93a10 10 0 010 14.14"/>
+                    </svg>
+                    <span id="abyssball-mute-label">MUTED</span>
+                </button>
+            </div>
         </div>
 
         <!-- Project Details -->
         <div class="w-full max-w-5xl mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <!-- Role / Tools / Timeline -->
+            <!-- Role / Tools / Platform -->
             <div class="col-span-1 flex flex-col gap-6 font-light">
                 <div>
                     <h3 class="font-bebas text-2xl tracking-widest text-gray-400 mb-2">ROLE</h3>
-                    <p class="text-sm tracking-wider text-gray-200">Solo Game Developer & Designer</p>
+                    <p class="text-sm tracking-wider text-gray-200">Solo Game Developer &amp; Designer</p>
                 </div>
                 <div>
                     <h3 class="font-bebas text-2xl tracking-widest text-gray-400 mb-2">TOOLS</h3>
-                    <p class="text-sm tracking-wider text-gray-200">Unity, C#, Blender</p>
+                    <p class="text-sm tracking-wider text-gray-200">Unity, C#, Android SDK</p>
                 </div>
                 <div>
-                    <h3 class="font-bebas text-2xl tracking-widest text-gray-400 mb-2">TIMELINE</h3>
-                    <p class="text-sm tracking-wider text-gray-200">2026</p>
+                    <h3 class="font-bebas text-2xl tracking-widest text-gray-400 mb-2">MILESTONE</h3>
+                    <p class="text-sm tracking-wider text-gray-200">First Unity Project &bull; Mobile (Android)</p>
                 </div>
             </div>
 
@@ -81,46 +111,53 @@
             <div class="col-span-1 md:col-span-2">
                 <h3 class="font-bebas text-3xl tracking-widest text-white mb-4">THE CONCEPT</h3>
                 <p class="text-gray-300 font-light tracking-wide leading-relaxed mb-6">
-                    Abyss Ball is a fast-paced hypercasual arcade game built around instant pick-up-and-play controls and escalating velocity. Players guide a plummeting sphere through shifting hazards, chasing high scores in tight, replayable runs.
+                    Abyss Ball is my very first project built in Unity—a fast-paced mobile hypercasual game where players guide a bouncing ball down a vertical tower by rotating stacked disks, dropping through narrow gaps while steering clear of red danger zones.
                 </p>
                 <p class="text-gray-300 font-light tracking-wide leading-relaxed">
-                    Designed for crisp responsiveness and addictive "one more try" flow, the game pairs procedural obstacle generation with reactive particle effects, camera shake, and minimalist UI.
+                    Built end-to-end for Android, the project served as my hands-on introduction to Unity physics, touch-driven rotation controls, level progression, score tracking, and complete game-state UI including main menus, pause overlays, and instant restart loops.
                 </p>
-            </div>
-        </div>
-
-        <!-- Gameplay & Breakdown Grid -->
-        <div class="w-full max-w-5xl mt-20">
-            <h3 class="font-bebas text-3xl tracking-widest text-white mb-6">GAMEPLAY & BREAKDOWN</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Gameplay Still 01 -->
-                <div class="aspect-video bg-[#0a0a0a] border border-[#2a2a2a] rounded-sm relative group overflow-hidden flex items-center justify-center">
-                    <p class="font-bebas text-2xl text-[#2a2a2a] tracking-widest group-hover:scale-105 transition-transform duration-500">
-                        GAMEPLAY SCREENSHOT 01
-                    </p>
-                </div>
-                <!-- Gameplay Still 02 -->
-                <div class="aspect-video bg-[#0a0a0a] border border-[#2a2a2a] rounded-sm relative group overflow-hidden flex items-center justify-center">
-                    <p class="font-bebas text-2xl text-[#2a2a2a] tracking-widest group-hover:scale-105 transition-transform duration-500">
-                        OBSTACLE & DIFFICULTY CURVE
-                    </p>
-                </div>
-                <!-- UI / HUD -->
-                <div class="aspect-video bg-[#0a0a0a] border border-[#2a2a2a] rounded-sm relative group overflow-hidden flex items-center justify-center">
-                    <p class="font-bebas text-2xl text-[#2a2a2a] tracking-widest group-hover:scale-105 transition-transform duration-500">
-                        UI & SCORE SYSTEM
-                    </p>
-                </div>
-                <!-- VFX & Shaders -->
-                <div class="aspect-video bg-[#0a0a0a] border border-[#2a2a2a] rounded-sm relative group overflow-hidden flex items-center justify-center">
-                    <p class="font-bebas text-2xl text-[#2a2a2a] tracking-widest group-hover:scale-105 transition-transform duration-500">
-                        VFX & SHADER POLISH
-                    </p>
-                </div>
             </div>
         </div>
 
     </section>
+
+    <!-- Gameplay Video Audio Toggle Script -->
+    <script>
+        const abyssBallVideo = document.getElementById('abyssball-gameplay-video');
+        const abyssBallMuteBtn = document.getElementById('abyssball-mute-btn');
+        const abyssBallIconMuted = document.getElementById('abyssball-icon-muted');
+        const abyssBallIconUnmuted = document.getElementById('abyssball-icon-unmuted');
+        const abyssBallMuteLabel = document.getElementById('abyssball-mute-label');
+
+        function syncAbyssBallMuteUI() {
+            if (!abyssBallVideo || !abyssBallMuteBtn) return;
+            const isMuted = abyssBallVideo.muted;
+            abyssBallIconMuted.classList.toggle('hidden', !isMuted);
+            abyssBallIconUnmuted.classList.toggle('hidden', isMuted);
+            abyssBallMuteLabel.textContent = isMuted ? 'MUTED' : 'SOUND ON';
+
+            abyssBallMuteBtn.setAttribute('aria-label', `${isMuted ? 'Unmute' : 'Mute'} Abyss Ball Gameplay audio`);
+            abyssBallMuteBtn.classList.toggle('bg-white', !isMuted);
+            abyssBallMuteBtn.classList.toggle('text-black', !isMuted);
+            abyssBallMuteBtn.classList.toggle('border-white', !isMuted);
+            abyssBallMuteBtn.classList.toggle('bg-black/75', isMuted);
+            abyssBallMuteBtn.classList.toggle('text-gray-200', isMuted);
+            abyssBallMuteBtn.classList.toggle('border-white/25', isMuted);
+        }
+
+        if (abyssBallVideo && abyssBallMuteBtn) {
+            abyssBallMuteBtn.addEventListener('click', () => {
+                abyssBallVideo.muted = !abyssBallVideo.muted;
+                if (!abyssBallVideo.muted) {
+                    abyssBallVideo.play().catch(() => {});
+                }
+                syncAbyssBallMuteUI();
+            });
+
+            // Keep button synced with native player volume controls
+            abyssBallVideo.addEventListener('volumechange', syncAbyssBallMuteUI);
+        }
+    </script>
 
 </body>
 </html>
